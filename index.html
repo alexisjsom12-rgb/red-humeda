@@ -231,7 +231,7 @@ section.on{animation:entra .28s ease backwards}
 @media (max-width:600px){ #prev{max-height:200px} }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media (max-width:899px){
-  #guardar{display:none} .app{padding-bottom:180px}
+  .app{padding-bottom:120px}
   nav{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));border-radius:24px;box-shadow:0 8px 24px rgba(20,22,35,.35);padding:6px}
   nav div{gap:4px}
   nav button{min-height:54px;border-top:0;border-radius:18px}
@@ -258,6 +258,107 @@ button.hc{cursor:pointer}
 .instalar small{display:block;font-weight:500;color:var(--mut);font-size:12px}
 .instalar.on{display:block}
 .pasos{text-align:left;margin:4px 0 14px;padding-left:20px;line-height:1.6}
+
+/* =========== DISEÑO LIMPIO v10 =========== */
+section{max-width:760px;margin:0 auto}
+h2::after{display:none}
+h2{margin:16px 2px 12px}
+.net{margin:10px auto 0;max-width:732px;padding:6px 8px 6px 14px;background:none;border:0;justify-content:flex-start;gap:8px;font-size:13px;color:var(--mut)}
+.net b{font-weight:600;color:var(--mut)}
+.net .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none}
+.net.off .dot{background:var(--obs)}
+.net #recargar{margin-left:auto;min-height:32px;font-size:13px;padding:0 10px;background:transparent}
+.pend{max-width:732px;margin:6px auto 0}
+.tchips{display:flex;gap:8px;margin:8px 0 10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:0 4px 0 12px;font:600 14px Inter,sans-serif;color:var(--navy);min-height:42px;cursor:pointer;flex:none}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chip select,.chip input{border:0!important;background:transparent!important;padding:8px 8px 8px 0!important;font:600 14px Inter,sans-serif!important;color:inherit;outline:0!important;min-width:0}
+.chip.csel{flex:1 1 150px}.chip.csel select{width:100%}
+.chip.cin{flex:1 1 140px}.chip.cin input{width:100%}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;margin-bottom:12px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips .chip{padding:0 14px}
+.seg{display:flex;background:#e7e9ef;border-radius:12px;padding:3px;margin-bottom:10px;gap:0}
+.seg button,.seg .fb{flex:1;min-height:38px;border:0;border-radius:9px;background:transparent;color:var(--mut);font:600 13.5px Inter,sans-serif;cursor:pointer;padding:0 6px}
+.seg button.on,.seg .fb.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.buscar{margin-bottom:10px}
+.lista{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.pegas{display:block;max-height:none!important;overflow:visible!important;padding:0!important}
+.pegas .pega{border:0!important;border-bottom:1px solid #f0f1f4!important;border-radius:0!important;padding:12px 14px!important;min-height:0;grid-template-columns:auto 1fr auto;box-shadow:none!important}
+.pegas .pega:last-child{border-bottom:0!important}
+.pegas .pega .n{font-size:16px!important;width:36px!important;color:var(--navy)}
+.pegas .pega .c{font-size:14.5px!important}
+.pegas .pega.sel{background:#fff5f6}
+.pegas .empty{padding:24px 12px}
+.otop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 12px}
+.otop h2{margin:0}
+.fsel{width:auto!important;min-height:40px;padding:6px 10px!important;border-radius:10px!important;background:#fff!important;font:600 14px Inter,sans-serif!important;color:var(--navy)!important}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center;cursor:pointer;font:inherit;color:var(--ink)}
+.kpi b{display:block;font:800 24px Montserrat,sans-serif;color:var(--navy)}.kpi small{color:var(--mut);font-size:12px;line-height:1.2;display:block}
+.kpi.on{border-color:var(--navy);box-shadow:0 0 0 2px var(--navy) inset}
+.ofil{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:2px 0 10px;color:var(--mut);font-size:13px}
+.ofil .mini{min-height:36px;background:#fff}
+#reps{display:block}
+.ritem{display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid #f0f1f4;cursor:pointer;background:var(--card);width:100%;border-left:0;border-right:0;border-top:0;text-align:left;font:inherit;color:var(--ink)}
+.ritem:last-child{border-bottom:0}
+.ritem img,.ritem .ph{width:48px;height:48px;border-radius:10px;object-fit:cover;flex:none;background:#eceef3;display:flex;align-items:center;justify-content:center;font-size:18px}
+.ritem .tx{flex:1;min-width:0}.ritem .tx b{display:block;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ritem .tx small{color:var(--mut);font-size:12.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ritem .gok{color:var(--ok);font-weight:800;font-size:16px;margin-left:-4px}
+.faltd{margin:14px 0 4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 14px}
+.faltd summary{cursor:pointer;font-weight:600;color:var(--navy);padding:10px 0}
+.faltd .falta{padding:8px 0;border-top:1px solid #f0f1f4;display:flex;justify-content:space-between;gap:8px;font-size:14px}
+/* hojas desde abajo */
+.velo{position:fixed;inset:0;background:rgba(20,22,35,.45);z-index:15;display:none}
+.velo.on{display:block;animation:fondo .2s ease both}
+.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:min(560px,100vw);max-height:92vh;overflow-y:auto;background:var(--card);border-radius:22px 22px 0 0;z-index:16;padding:8px 16px calc(20px + env(safe-area-inset-bottom));transition:transform .32s cubic-bezier(.2,.8,.3,1);overscroll-behavior:contain;box-shadow:0 -6px 30px rgba(20,22,35,.25)}
+.sheet.on{transform:translate(-50%,0)}
+.asa{width:42px;height:5px;border-radius:5px;background:#d5d8e0;margin:4px auto 12px}
+.shead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.shead .n{font:800 22px Montserrat,sans-serif;color:var(--red)}
+.shead div{flex:1;min-width:0}.shead b{display:block;font-size:15.5px}.shead small{color:var(--mut);font-size:12.5px;display:block;overflow-wrap:anywhere}
+.x{width:38px;height:38px;border-radius:50%;border:0;background:#eef0f4;color:var(--navy);font-size:16px;cursor:pointer;flex:none}
+.fotos2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sheet .lbl{margin-top:14px}
+.pch button{flex:none;min-height:40px;padding:0 14px;border-radius:20px;border:1px solid var(--line);background:#fff;font:600 14px Inter,sans-serif;color:var(--navy);cursor:pointer}
+.pch button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.sheet .repd{margin:12px 0 4px}
+.sheet #guardar{margin-top:10px}
+.op{display:flex;align-items:center;gap:14px;width:100%;padding:13px 4px;border:0;border-bottom:1px solid #f0f1f4;background:none;text-align:left;font:inherit;color:var(--ink);cursor:pointer}
+.op:last-child{border-bottom:0}
+.op .ic{width:42px;height:42px;border-radius:12px;background:#f3f4f7;display:grid;place-items:center;font-size:20px;flex:none}
+.op b{display:block;font-size:15px}.op small{color:var(--mut);font-size:12.5px}
+.op.instalar{display:none;margin:0;border:0;border-radius:0;color:var(--ink);font-weight:400}
+.op.instalar.on{display:flex}
+.volver{background:none;border:0;color:var(--red);font:600 15px Inter,sans-serif;padding:12px 0 0;cursor:pointer}
+.fab{position:fixed;right:max(16px,calc(50vw - 364px));bottom:calc(88px + env(safe-area-inset-bottom));z-index:7;border:0;border-radius:18px;background:var(--red);color:#fff;font:700 15px Inter,sans-serif;padding:14px 18px;box-shadow:0 6px 16px rgba(208,16,43,.35);cursor:pointer;display:none}
+#v-docs.on~.fab,section#v-docs.on .fab{display:block}
+.dpick{position:relative;display:inline-flex;align-items:center;overflow:hidden}
+.dpick input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.doc2{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer}
+.doc2 .pv{width:56px;height:72px;border-radius:8px;border:1px solid var(--line);object-fit:cover;flex:none;background:#f3f4f7;display:grid;place-items:center;font-size:22px}
+.doc2 .tx{flex:1;min-width:0}.doc2 b{display:block;font-size:14.5px;margin-top:4px}.doc2 small{color:var(--mut);font-size:12.5px}
+.doc2 .cat{font-size:11px}
+.tipos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tipos button{min-height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font:600 13.5px Inter,sans-serif;color:var(--navy);cursor:pointer}
+.tipos button.on{border-color:var(--red);background:#fff5f6;color:var(--red)}
+.dauto{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;padding:10px 12px;border-radius:12px;background:#f3f4f7;font-size:14px}
+.vacio{padding:28px 12px;text-align:center;color:var(--mut)}
+.vacio .ico{display:block;font-size:30px;margin-bottom:4px}
+.dl{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 16px;border-radius:12px;background:var(--red);color:#fff!important;font:700 15px Inter,sans-serif;text-decoration:none;margin:6px 0 14px}
+.det-foto{width:100%;max-height:260px;object-fit:cover;border-radius:12px;background:#eceef3;cursor:zoom-in;display:block}
+.det p{margin:6px 0;font-size:14.5px}
+.det .btn{margin-top:8px}
+@media (max-width:600px){ .net{margin:6px 10px 0} .pend{margin:6px 10px 0} }
+.modal{z-index:30}.visor{z-index:40}.toast{z-index:50}
+.franja{background:linear-gradient(90deg,var(--red) var(--avance,0%),#3a3e58 var(--avance,0%));transition:background .4s}
+@media (min-width:900px){
+  .net,.pend{margin:14px auto 0}
+  .sheet{bottom:auto;top:50%;transform:translate(-50%,-40%) scale(.98);opacity:0;pointer-events:none;border-radius:20px;max-height:86vh;transition:transform .25s ease,opacity .2s ease}
+  .sheet.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}
+  .fab{bottom:28px}
+}
 </style>
 </head>
 <body>
@@ -271,128 +372,76 @@ button.hc{cursor:pointer}
     <nav><div>
   <button data-v="terreno" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Terreno</button>
   <button data-v="oficina"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>Oficina</button>
-  <button data-v="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Plan</button>
-  <button data-v="docs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Docs</button>
+  <button data-v="docs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>Panel</button>
+  <button data-v="mas"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>Más</button>
 </div></nav>
   </div>
   <div class="franja"></div>
 </header>
 
-<div class="net"><span><b id="netTxt">Con señal</b></span><button class="mini" id="recargar">Actualizar</button></div>
-<button class="instalar" id="instalar">📲 Instalar la app en este celular <small>para que abra aunque no haya señal</small></button>
+<div class="net"><span class="dot"></span><b id="netTxt">Con señal</b><button class="mini" id="recargar">↻ Actualizar</button></div>
 <div class="pend" id="pend"></div>
 
 <section id="v-terreno" class="on">
-  <h2>Reportar una pega</h2>
-  <div class="cols"><div>
-  <div class="card">
-    <div class="row2">
-      <div><label class="lbl" for="tLider">Líder / grupo</label><select id="tLider"></select></div>
-      <div><label class="lbl" for="tec">Técnico</label><input type="text" id="tec" placeholder="Tu nombre"></div>
-    </div>
+  <div class="tchips">
+    <label class="chip csel"><span>👷</span><select id="tLider" aria-label="Líder"></select></label>
+    <label class="chip cin"><span>🙋</span><input type="text" id="tec" placeholder="Tu nombre" aria-label="Técnico"></label>
   </div>
-  <div class="card">
-    <span class="lbl">1 · Elige la pega</span>
-    <div class="avance" id="avance"></div>
-    <input type="text" id="buscar" class="buscar" placeholder="Buscar N° o componente">
-    <label class="chk"><input type="checkbox" id="ocultar"> Ocultar las ya reportadas</label>
-    <div style="height:8px"></div>
-    <div class="pegas" id="pegas"><div class="esq"><i></i><i></i><i></i><i></i></div></div>
-  </div>
-  </div><div>
-  <div class="elegida" id="elegida"><b id="eN"></b><span id="eC"></span><button id="eCambiar">Cambiar</button></div>
-  <div class="card">
-    <span class="lbl">2 · Foto del componente</span>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><label class="foto"><input type="file" id="foto" accept="image/*">🖼️ Subir foto</label><label class="foto"><input type="file" id="fotoCam" accept="image/*" capture="environment">📷 Tomar foto</label></div>
-    <img id="prev" alt="Foto del componente">
-    <div class="fotoOk" id="fotoOk">✓ Foto lista</div>
-  </div>
-  <div class="card">
-    <span class="lbl">3 · Estado</span>
-    <div class="est">
-      <button class="eb" data-v="ok">Operativo</button>
-      <button class="eb" data-v="obs">Operativo con observación</button>
-      <button class="eb" data-v="fs">Fuera de servicio</button>
-      <button class="eb" data-v="nr">No realizada</button>
-      <button class="eb" data-v="qp">Quiebre de programa</button>
-    </div>
-  </div>
-  <div class="card">
-    <span class="lbl">4 · Detalle del trabajo</span>
-    <label class="lbl" for="pulg" style="font-weight:500">Pulgadas (si aplica)</label>
-    <input type="text" id="pulg" inputmode="decimal" placeholder='Ej: 10 o 2 1/2'>
-    <label class="lbl" for="desc" style="margin-top:12px;font-weight:500">Qué se hizo</label>
-    <textarea id="desc" placeholder="Ej: se realiza limpieza mediante hidrolavado y se lubrican partes móviles"></textarea>
-    <p class="hint">Se completa solo según el componente. Corrígelo si hiciste algo distinto.</p>
-    <label class="lbl" for="obs" style="margin-top:12px;font-weight:500">Observación</label>
-    <textarea id="obs" placeholder="Ej: mariposa cerrada, sin suministro de agua"></textarea>
-    <p class="hint">Obligatoria si no está Operativo.</p>
-    <details class="repd" style="margin-top:10px"><summary>Repuestos (opcional)</summary>
-      <input type="text" id="rep" placeholder="Utilizados Sercoing">
-      <input type="text" id="rpc" placeholder="Utilizados Codelco">
-      <input type="text" id="rps" placeholder="Solicitados (ej: se solicitan gemelos al mandante)">
-    </details>
-  </div>
-  <div id="msg"></div>
-  <button class="btn" id="guardar">Guardar reporte</button>
-  <button class="btn flota" id="flota">Enviar reporte</button>
-  </div></div>
+  <div class="seg" id="tSeg"><button data-t="pend" class="on">Pendientes</button><button data-t="rep">Reportadas</button><button data-t="todas">Todas</button></div>
+  <input type="text" id="buscar" class="buscar" placeholder="🔍 Buscar N° o componente">
+  <input type="checkbox" id="ocultar" hidden><div id="avance" hidden></div>
+  <div class="lista pegas" id="pegas"><div class="esq"><i></i><i></i><i></i><i></i></div></div>
 </section>
 
 <section id="v-oficina">
-  <div class="card hist" id="hist">
-    <div class="histTop"><span class="lbl" style="margin:0">📊 Historial de todas las pegas</span><small id="hHora"></small></div>
+  <div class="otop"><h2>Oficina</h2><select id="ofFecha" class="fsel" aria-label="Día"></select></div>
+  <p class="hint" id="ofNota" style="display:none;margin:-6px 0 10px">Día anterior: se muestran los reportes recibidos ese día.</p>
+  <div class="kpis">
+    <button class="kpi" data-k="Fuera de servicio"><b id="kFs" style="color:var(--fs)">–</b><small>fuera de servicio</small></button>
+    <button class="kpi" data-k="Operativo con observación"><b id="kOb" style="color:#b07800">–</b><small>con observación</small></button>
+    <button class="kpi" data-k="sin"><b id="sFal">–</b><small>sin reporte</small></button>
+  </div>
+  <div class="seg filt"><button class="fb on" data-f="pend">Guía pendiente</button><button class="fb" data-f="hecha">Guía hecha</button><button class="fb" data-f="todas">Todas</button></div>
+  <div class="ofil"><span id="ofRes"></span><button class="mini" id="ofFiltros">⚙️ Filtros</button></div>
+  <div id="reps"><div class="esq"><i></i><i></i><i></i><i></i></div></div>
+  <details class="faltd" id="faltd"><summary>Pegas sin reporte <b id="sFal2"></b></summary><div id="faltan"></div></details>
+  <span hidden><b id="sRep"></b><b id="sGui"></b></span>
+</section>
+
+<section id="v-docs">
+  <div class="otop"><h2>Panel informativo</h2><span class="tag t-ok">✓ Sin señal también</span></div>
+  <div class="seg dsec"><button class="fb on" data-d="Diario">Del día</button><button class="fb" data-d="General">Generales</button></div>
+  <div class="ofil" id="dFechaCard"><span id="dFechaTxt"></span><label class="mini dpick">📅 Otro día<input type="date" id="dFechaPick"></label><input type="hidden" id="dFecha"></div>
+  <div id="docs"><div class="esq"><i></i><i></i><i></i><i></i></div></div>
+  <button class="fab" id="dNuevo">📷 Subir documento</button>
+</section>
+
+<section id="v-hist">
+  <button class="volver" data-volver>‹ Volver</button>
+  <h2>Historial de pegas</h2>
+  <span class="lbl">Fechas</span>
+  <div class="chips" id="hRango"><button class="chip" data-r="hoy">Hoy</button><button class="chip on" data-r="semana">Últimos 7 días</button><button class="chip" data-r="mes">Este mes</button><button class="chip" data-r="otra">Elegir…</button></div>
+  <div class="row2" id="hFechas" style="display:none;margin-bottom:10px"><div><label class="lbl" for="hDesde">Desde</label><input type="date" id="hDesde"></div><div><label class="lbl" for="hHasta">Hasta</label><input type="date" id="hHasta"></div></div>
+  <span class="lbl">Estados (puedes marcar varios)</span>
+  <div class="chips" id="hEst"><button class="chip on" data-e="Fuera de servicio">🔴 Fuera de servicio</button><button class="chip on" data-e="Operativo con observación">🟡 Con observación</button><button class="chip" data-e="Operativo">🟢 Operativo</button><button class="chip" data-e="No realizada">🟣 No realizada</button></div>
+  <div id="hRes"></div>
+  <button class="btn" id="hExcel">⬇️ Descargar Excel</button>
+  <div id="hMsg" style="margin-top:10px;font-weight:600"></div>
+  <div class="card hist" id="hist" style="margin-top:16px">
+    <div class="histTop"><span class="lbl" style="margin:0">📊 Planilla con todas las pegas</span><small id="hHora"></small></div>
     <div class="hcont">
-      <button class="hc fs" data-hf="Fuera de servicio"><b id="hFs">–</b><span>fuera de servicio</span></button>
+      <button class="hc fs" data-hf="Fuera de servicio"><b id="hFs">–</b><span>equipos fuera de servicio hoy</span></button>
       <button class="hc ob" data-hf="Operativo con observación"><b id="hOb">–</b><span>con observación</span></button>
       <div class="hc"><b id="hTot">–</b><span>reportes en total</span></div>
     </div>
     <div class="hlista" id="hLista"></div>
-    <div class="row2" style="margin-top:10px">
-      <a class="btn sec" id="hVer" target="_blank" rel="noopener">Abrir planilla</a>
-      <a class="btn" id="hXls" target="_blank" rel="noopener">Descargar Excel</a>
-    </div>
-    <p class="hint" style="margin:8px 0 0">Una sola planilla que junta todos los días. Siempre es el mismo link y se actualiza sola.</p>
+    <div class="row2" style="margin-top:10px"><a class="btn sec" id="hVer" target="_blank" rel="noopener">Abrir planilla</a><a class="btn" id="hXls" target="_blank" rel="noopener">Excel completo</a></div>
   </div>
-  <h2>Reportes para guías</h2>
-  <div class="card" style="padding:12px 16px"><label class="lbl" for="ofFecha">Día</label><select id="ofFecha"></select>
-    <p class="hint" id="ofNota" style="display:none">Día anterior: se muestran los reportes recibidos ese día.</p></div>
-  <div class="stats">
-    <div class="st"><b id="sRep">–</b><span>reportadas</span></div>
-    <div class="st"><b id="sFal">–</b><span>sin reporte</span></div>
-    <div class="st"><b id="sGui">–</b><span>guías hechas</span></div>
-  </div>
-  <div class="card" style="padding:12px 16px">
-    <div class="row2">
-      <div><label class="lbl" for="fLider">Líder</label><select id="fLider"></select></div>
-      <div><label class="lbl" for="fTec">Técnico</label><select id="fTec"></select></div>
-      <div><label class="lbl" for="fEst">Estado</label><select id="fEst"><option value="">Todos</option><option>Operativo</option><option>Operativo con observación</option><option>Fuera de servicio</option><option>No realizada</option><option>Quiebre de programa</option></select></div>
-      <div><label class="lbl" for="fOrden">Ordenar por</label><select id="fOrden"><option value="n">N° de pega</option><option value="e">Estado (problemas primero)</option><option value="tec">Técnico</option></select></div>
-    </div>
-  </div>
-  <div class="filt">
-    <button class="fb on" data-f="pend">Guía pendiente</button>
-    <button class="fb" data-f="hecha">Guía hecha</button>
-    <button class="fb" data-f="todas">Todas</button>
-  </div>
-  <div id="reps"><div class="esq"><i></i><i></i><i></i><i></i></div></div>
-  <h2>Pegas sin reporte</h2>
-  <div class="card" id="faltan"></div>
-</section>
-
-<section id="v-docs">
-  <h2>Documentos</h2>
-  <div class="dsec">
-    <button class="fb on" data-d="General">Generales</button>
-    <button class="fb" data-d="Diario">Diarios</button>
-  </div>
-  <div class="card" id="dFechaCard" style="padding:12px 16px;display:none"><label class="lbl" for="dFecha">Día</label><input type="text" id="dFecha" placeholder="dd-mm-aaaa"></div>
-  <button class="btn" id="dNuevo" style="margin-bottom:12px">+ Subir documento o nota</button>
-  <div id="docs"><div class="esq"><i></i><i></i><i></i><i></i></div></div>
 </section>
 
 <section id="v-plan">
-  <h2>Cargar plan del día</h2>
+  <button class="volver" data-volver>‹ Volver</button>
+  <h2>Subir plan del día</h2>
   <div class="pcols"><div>
   <div class="card">
     <div class="row2">
@@ -409,16 +458,15 @@ button.hc{cursor:pointer}
     <div id="msgPlan" style="margin-top:10px;font-weight:600"></div>
   </div>
   </div><div>
-  <div class="card">
-    <span class="lbl">Descargar Excel de reportes</span>
-    <p class="hint" style="margin:0 0 10px">Incluye lo que subió terreno (estado, observación, repuestos, foto) y lo que marcó oficina (guía hecha y folio).</p>
-    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px">
-      <div><label class="lbl" for="exDesde">Desde</label><input type="text" id="exDesde" placeholder="dd-mm-aaaa"></div>
-      <div><label class="lbl" for="exHasta">Hasta</label><input type="text" id="exHasta" placeholder="dd-mm-aaaa"></div>
-    </div>
-    <div style="margin-top:10px"><button class="btn" id="exportar">Generar Excel</button></div>
-    <div id="exMsg" style="margin-top:10px;font-weight:600"></div>
-  </div>
+<input type="hidden" id="exDesde"><input type="hidden" id="exHasta"><button id="exportar" hidden></button><div id="exMsg" hidden></div>
+
+  <div class="card" id="planList"></div>
+  </div></div>
+</section>
+
+<section id="v-lid">
+  <button class="volver" data-volver>‹ Volver</button>
+  <h2>Líderes</h2>
   <div class="card">
     <span class="lbl">Líderes</span>
     <p class="hint" style="margin:0 0 10px">Edita los nombres, agrega o quita líderes. Si cambias un nombre, sus pegas cargadas pasan al nombre nuevo.</p>
@@ -429,11 +477,69 @@ button.hc{cursor:pointer}
     <div style="margin-top:10px"><button class="btn" id="lidOk">Guardar líderes</button></div>
     <div id="lidMsg" style="margin-top:10px;font-weight:600"></div>
   </div>
-  <div class="card" id="planList"></div>
-  </div></div>
 </section>
 </div>
 
+
+<div class="velo" id="velo"></div>
+
+<div class="sheet" id="hRep" role="dialog" aria-label="Reportar pega">
+  <div class="asa"></div>
+  <div class="shead"><span class="n" id="eN"></span><div><b id="eC"></b><small id="eT"></small></div><button class="x" id="eCambiar" aria-label="Cerrar">✕</button></div>
+  <div class="fotos2"><label class="foto"><input type="file" id="fotoCam" accept="image/*" capture="environment">📷 Tomar foto</label><label class="foto"><input type="file" id="foto" accept="image/*">🖼️ Galería</label></div>
+  <img id="prev" alt="Foto del componente"><div class="fotoOk" id="fotoOk">✓ Foto lista</div>
+  <span class="lbl">Estado</span>
+  <div class="est">
+    <button class="eb" data-v="ok">Operativo</button>
+    <button class="eb" data-v="obs">Con observación</button>
+    <button class="eb" data-v="fs">Fuera de servicio</button>
+    <button class="eb" data-v="nr">No realizada</button>
+    <button class="eb" data-v="qp">Quiebre de programa</button>
+  </div>
+  <div id="obsBox" style="display:none"><label class="lbl" for="obs">Observación</label><textarea id="obs" placeholder="Ej: mariposa cerrada, sin suministro de agua"></textarea></div>
+  <span class="lbl">Pulgadas</span>
+  <div class="chips pch" id="pChips"><button data-p='1/2"'>½"</button><button data-p='3/4"'>¾"</button><button data-p='1"'>1"</button><button data-p='1.1/4"'>1.1/4"</button><button data-p='1.1/2"'>1.1/2"</button><button data-p='2"'>2"</button><button data-p='2.1/2"'>2.1/2"</button><button data-p='3"'>3"</button><button data-p='4"'>4"</button><button data-p='6"'>6"</button><button data-p='8"'>8"</button><button data-p='10"'>10"</button><button data-p="otra">Otra…</button></div>
+  <input type="text" id="pulg" placeholder='Escribe la medida, ej: 1.1/2"' style="display:none;margin-top:8px">
+  <label class="lbl" for="desc" style="margin-top:12px">Qué se hizo</label>
+  <textarea id="desc"></textarea>
+  <details class="repd"><summary>➕ Repuestos (opcional)</summary>
+    <input type="text" id="rep" placeholder="Utilizados Sercoing">
+    <input type="text" id="rpc" placeholder="Utilizados Codelco">
+    <input type="text" id="rps" placeholder="Solicitados (ej: se solicitan gemelos al mandante)">
+  </details>
+  <div id="msg"></div>
+  <button class="btn" id="guardar">Enviar pega</button>
+  <button id="flota" hidden></button><div id="elegida" hidden></div>
+</div>
+
+<div class="sheet" id="hDet" role="dialog" aria-label="Detalle del reporte"><div class="asa"></div><div id="detBody"></div></div>
+
+<div class="sheet" id="hFil" role="dialog" aria-label="Filtros">
+  <div class="asa"></div><h2 style="margin-top:0">Filtros</h2>
+  <div class="row2">
+    <div><label class="lbl" for="fLider">Líder</label><select id="fLider"></select></div>
+    <div><label class="lbl" for="fTec">Técnico</label><select id="fTec"></select></div>
+    <div><label class="lbl" for="fEst">Estado</label><select id="fEst"><option value="">Todos</option><option>Operativo</option><option>Operativo con observación</option><option>Fuera de servicio</option><option>No realizada</option><option>Quiebre de programa</option></select></div>
+    <div><label class="lbl" for="fOrden">Ordenar por</label><select id="fOrden"><option value="e">Estado (problemas primero)</option><option value="n">N° de pega</option><option value="tec">Técnico</option></select></div>
+  </div>
+  <div style="display:grid;gap:8px;margin-top:12px"><button class="btn" data-cerrar>Ver resultados</button><button class="btn sec" id="filLimpiar">Quitar filtros</button></div>
+</div>
+
+<div class="sheet" id="hMas" role="dialog" aria-label="Más opciones">
+  <div class="asa"></div>
+  <button class="op" data-ir="hist"><span class="ic">📊</span><span><b>Historial de pegas</b><small>Elegir fechas y estados · Excel para el informe</small></span></button>
+  <button class="op" data-ir="plan"><span class="ic">📋</span><span><b>Subir plan del día</b><small>Pegar el plan y repartirlo por líder</small></span></button>
+  <button class="op" id="opJef"><span class="ic">🔗</span><span><b>Link para jefatura</b><small>Solo documentos del día y avance de pegas</small></span></button>
+  <button class="op" data-ir="lid"><span class="ic">👥</span><span><b>Líderes</b><small>Cambiar nombres, agregar o quitar</small></span></button>
+  <button class="op instalar" id="instalar"><span class="ic">📲</span><span><b>Instalar la app</b><small>Para que abra aunque no haya señal</small></span></button>
+</div>
+
+<div class="sheet" id="hJef" role="dialog" aria-label="Link para jefatura">
+  <div class="asa"></div><h2 style="margin-top:0">Link para jefatura</h2>
+  <p class="hint" style="margin:0 0 12px">Quien abra este link solo ve 2 pestañas: <b>Documentos del día</b> y <b>Avance de pegas</b>, con fotos y Excel para descargar. No puede editar ni entrar a nada más. Abre en el día de hoy y pueden elegir otro día.</p>
+  <input type="text" id="jUrl" readonly onclick="this.select()">
+  <div style="display:grid;gap:8px;margin-top:10px"><button class="btn" id="jCompartir">📤 Compartir link</button><button class="btn sec" id="jCopiar">📋 Copiar link</button><a class="btn sec" id="jVer" target="_blank" rel="noopener">👁️ Ver cómo lo ve la jefatura</a></div>
+</div>
 
 <div class="modal" id="modal"><div class="card"><img id="mImg" alt="Foto"><p id="mTxt" style="margin:10px 0"></p><a id="mLink" target="_blank" rel="noopener" style="display:block;margin-bottom:10px;font-weight:600;color:var(--red)">Abrir foto original en Drive</a><button class="btn sec" id="mClose">Cerrar</button></div></div>
 
@@ -456,28 +562,29 @@ button.hc{cursor:pointer}
   <div style="display:grid;gap:8px"><button class="btn" id="eOk">Guardar cambios</button><button class="btn sec" id="eCancel">Cancelar</button></div>
 </div></div>
 
-<div class="modal" id="mDoc"><div class="card" style="max-height:90vh;overflow-y:auto">
-  <span class="lbl">Subir documento o nota</span>
-  <div class="row2">
-    <div><label class="lbl" for="dSec">Sección</label><select id="dSec"><option value="General">General</option><option value="Diario">Diario</option></select></div>
-    <div><label class="lbl" for="dCat">Tipo</label><select id="dCat"><option>ART</option><option>Check list</option><option>Aprendizajes de la semana</option><option>Charla fin de semana</option><option>Procedimiento</option><option>Otro</option></select></div>
-  </div>
-  <label class="lbl" for="dTit" style="margin-top:10px">Título</label><input type="text" id="dTit" placeholder="Ej: ART red húmeda Sala de Bombas">
-  <label class="lbl" for="dFec" style="margin-top:10px">Fecha</label><input type="text" id="dFec" placeholder="dd-mm-aaaa">
-  <label class="lbl" for="dNota" style="margin-top:10px">Texto / nota (opcional)</label><textarea id="dNota" placeholder="Ej: aprendizaje de la semana, puntos de la charla…"></textarea>
-  <label class="lbl" style="margin-top:10px">Hojas del documento</label>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><label class="foto"><input type="file" id="dCam" accept="image/*" capture="environment">📷 Tomar foto</label><label class="foto"><input type="file" id="dGal" accept="image/*" multiple>🖼️ Galería</label></div>
-  <label class="chk" style="margin-top:8px"><input type="checkbox" id="dScan" checked> ✨ Modo escáner (hoja blanca y letra nítida)</label>
+<div class="sheet" id="mDoc" role="dialog" aria-label="Subir documento">
+  <div class="asa"></div><h2 style="margin-top:0">Subir documento</h2>
+  <span class="lbl">¿Qué es?</span>
+  <div class="tipos" id="dTipos"><button data-c="ART" class="on">ART</button><button data-c="Check list">Check list</button><button data-c="Charla fin de semana">Charla</button><button data-c="Aprendizajes de la semana">Aprendizajes</button><button data-c="Procedimiento">Procedimiento</button><button data-c="Otro">Otro</button></div>
+  <span class="lbl">¿Dónde va?</span>
+  <div class="seg" id="dDonde"><button data-s="Diario" class="on">📅 Del día</button><button data-s="General">📁 General</button></div>
+  <select id="dCat" hidden><option>ART</option><option>Check list</option><option>Aprendizajes de la semana</option><option>Charla fin de semana</option><option>Procedimiento</option><option>Otro</option></select>
+  <div class="fotos2" style="margin-top:12px"><label class="foto"><input type="file" id="dCam" accept="image/*" capture="environment">📷 Sacar foto</label><label class="foto"><input type="file" id="dGal" accept="image/*" multiple>🖼️ Galería</label></div>
   <div class="dpags" id="dPags"></div>
-  <p class="hint" style="margin:6px 0 0">Saca una foto por hoja, desde arriba y con buena luz. Puedes agregar varias hojas.</p>
-  <details style="margin-top:6px"><summary class="hint" style="cursor:pointer">📎 ¿Ya lo tienes en PDF o Excel? Súbelo aquí</summary>
-    <label class="foto" style="margin-top:6px;min-height:46px"><input type="file" id="dArch">Elegir archivo</label>
-  </details>
+  <label class="chk" style="margin-top:8px"><input type="checkbox" id="dScan" checked> ✨ Modo escáner (hoja blanca y letra nítida)</label>
+  <div class="dauto"><span>📄 <b id="dTitTxt"></b></span><button class="mini" id="dEditar">Cambiar</button></div>
+  <div id="dMasBox" style="display:none">
+    <label class="lbl" for="dTit">Título</label><input type="text" id="dTit">
+    <label class="lbl" for="dFec" style="margin-top:8px">Fecha</label><input type="text" id="dFec" placeholder="dd-mm-aaaa">
+    <select id="dSec" hidden><option value="Diario">Del día</option><option value="General">Generales</option></select>
+    <label class="lbl" for="dNota" style="margin-top:8px">Nota (opcional)</label><textarea id="dNota" placeholder="Ej: puntos de la charla…"></textarea>
+    <details style="margin-top:6px"><summary class="hint" style="cursor:pointer">📎 Subir un PDF o Excel</summary><label class="foto" style="margin-top:6px;min-height:46px"><input type="file" id="dArch">Elegir archivo</label></details>
+  </div>
   <p class="hint" id="dArchNom"></p>
-  <label class="lbl" for="dPin" style="margin-top:10px">PIN para subir</label><input type="text" id="dPin" inputmode="numeric" autocomplete="off">
+  <div id="dPinBox"><label class="lbl" for="dPin">PIN para subir (se pide una sola vez)</label><input type="text" id="dPin" inputmode="numeric" autocomplete="off"></div>
   <p id="dMsg" class="err" style="min-height:20px;margin:8px 0;font-weight:600"></p>
   <div style="display:grid;gap:8px"><button class="btn" id="dOk">Subir</button><button class="btn sec" id="dCancel">Cancelar</button></div>
-</div></div>
+</div>
 
 <div class="modal" id="mSalir"><div class="card" style="text-align:center">
   <div style="font-size:38px;line-height:1;margin:4px 0 8px">🚪</div>
@@ -488,7 +595,7 @@ button.hc{cursor:pointer}
 
 <div class="modal" id="mIos"><div class="card">
   <span class="lbl" style="font-size:17px">📲 Instalar en iPhone</span>
-  <ol class="pasos"><li>Abre este link en <b>Safari</b> (no en Chrome).</li><li>Toca el botón <b>Compartir</b> (cuadrado con flecha ↑) abajo.</li><li>Elige <b>"Agregar a inicio"</b> y luego <b>Agregar</b>.</li><li>Abre la app desde el ícono nuevo.</li></ol>
+  <ol class="pasos"><li>Abre este link en <b>Safari</b>.</li><li>Toca el botón <b>Compartir</b> <span style="white-space:nowrap">(cuadrado con flecha ↑)</span>. Si no lo ves, toca los <b>tres puntos ···</b> o el ícono <b>☰</b> junto a la dirección y luego <b>Compartir</b>.</li><li>Baja y elige <b>"Agregar a pantalla de inicio"</b>. Si aparece <b>"Abrir como app web"</b>, déjalo activado. Toca <b>Agregar</b>.</li><li>Abre la app <b>desde el ícono nuevo</b>, no desde Safari.</li></ol>
   <button class="btn" id="iosOk">Entendido</button>
 </div></div>
 
@@ -519,7 +626,7 @@ const COD = t => Object.keys(EST).find(k => EST[k] === t) || 'ok';
 const CORTO = {ok:'OK', obs:'Obs', fs:'FS', nr:'NR', qp:'QP'};
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 // Tiempo máximo de espera por acción (ms). Si no hay respuesta, se trata como "sin señal".
-const ESPERA = {getInit:12000, getOficina:15000, saveReport:30000, marcarGuia:12000, editarReporte:15000, cargarPlan:30000, exportarExcel:90000, getDocs:15000, actualizarHistorial:120000, guardarLideres:20000, subirDoc:120000, borrarDoc:15000};
+const ESPERA = {getInit:12000, getOficina:15000, saveReport:30000, marcarGuia:12000, editarReporte:15000, cargarPlan:30000, exportarExcel:90000, getDocs:15000, getHistorial:25000, getJefatura:20000, getDocsCelular:20000, actualizarHistorial:120000, guardarLideres:20000, subirDoc:120000, borrarDoc:15000};
 let sinRed = false;
 // EN_GOOGLE: abierta desde el link de Apps Script. Si no, es la app instalada y habla con la API (config.js)
 const EN_GOOGLE = !!(window.google && google.script && google.script.run);
@@ -542,7 +649,8 @@ const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 
 const ESQ = '<div class="esq"><i></i><i></i><i></i><i></i></div>';
 const msg = (t, c) => { $('msg').textContent = t; $('msg').className = c || ''; if (c === 'err' && window.innerWidth < 900 && typeof toast === 'function') toast('⚠️ ' + t, 'err'); };
 
-let lideres = [], dSec = 'General', recien = null, planGuardado = '';
+let docsL = [], pags = [];
+let lideres = [], dSec = 'Diario', recien = null, planGuardado = '', tFiltro = 'pend', vistaMain = 'terreno';
 let plan = [], fecha = '', estados = {}, ofi = null, sel = null, est = null, foto = null, mini = null, filtro = 'pend', vista = 'terreno';
 
 // ---------- Guardado local (sin señal) ----------
@@ -562,6 +670,7 @@ function pintarCola() {
   if (planGuardado) { const d = new Date(planGuardado), z = n => String(n).padStart(2, '0'); if (!isNaN(d)) g = ` · plan guardado ${z(d.getDate())}-${z(d.getMonth() + 1)} ${z(d.getHours())}:${z(d.getMinutes())}`; }
   $('netTxt').textContent = off ? 'Sin señal · trabajando sin conexión' + g : 'Con señal';
   $('netTxt').style.color = off ? 'var(--obs)' : '';
+  document.querySelector('.net').classList.toggle('off', off);
 }
 async function refrescarCola() { try { cola = await listar(); } catch (e) { cola = []; } pintarCola(); pintarPegas(); }
 async function vaciarCola() {
@@ -625,14 +734,21 @@ function pintarLideres() {
 $('tLider').addEventListener('change', () => { try { localStorage.setItem('rh_lider', $('tLider').value); } catch (e) {} sel = null; pintarPegas(); });
 $('buscar').addEventListener('input', () => pintarPegas());
 $('ocultar').addEventListener('change', () => pintarPegas());
+const hecha = p => !!estados[p.k] || cola.some(r => KEY(r.n, r.t) === p.k);
 function pegasVisibles() {
-  const l = $('tLider').value, q = $('buscar').value.trim().toLowerCase(), oc = $('ocultar').checked;
-  return plan.filter(p => (!l || p.l === l) && (!q || (p.n + ' ' + p.c + ' ' + p.t).toLowerCase().indexOf(q) >= 0) && (!oc || !estados[p.k] || p.k === sel));
+  const l = $('tLider').value, q = $('buscar').value.trim().toLowerCase();
+  return plan.filter(p => (!l || p.l === l) && (!q || (p.n + ' ' + p.c + ' ' + p.t).toLowerCase().indexOf(q) >= 0)
+    && (tFiltro === 'todas' || p.k === sel || (tFiltro === 'pend' ? !hecha(p) : hecha(p))));
 }
+document.querySelectorAll('#tSeg button').forEach(b => b.onclick = () => { tFiltro = b.dataset.t; document.querySelectorAll('#tSeg button').forEach(x => x.classList.toggle('on', x === b)); pintarPegas(); });
 function pintarPegas() {
   const delGrupo = plan.filter(p => !$('tLider').value || p.l === $('tLider').value);
   $('pegas').innerHTML = pegasVisibles().map(p => `<button class="pega${sel === p.k ? ' sel' : ''}${recien === p.k ? ' recien' : ''}" data-k="${esc(p.k)}"><span class="n">${esc(p.n)}</span><span class="c">${esc(p.c)}<small>${esc(p.t)} · ${esc(p.u)}</small></span>${chip(p)}</button>`).join('') || `<p class="empty"><span class="ico">${plan.length ? '🔍' : '📋'}</span>${plan.length ? 'No hay pegas con ese filtro.' : 'Aún no hay pegas cargadas para hoy.'}</p>`;
-  const h = delGrupo.filter(p => estados[p.k]).length;
+  const h = delGrupo.filter(p => estados[p.k]).length, hq = delGrupo.filter(hecha).length;
+  const tb = document.querySelectorAll('#tSeg button');
+  tb[0].textContent = `Pendientes (${delGrupo.length - hq})`; tb[1].textContent = `Reportadas (${hq})`; tb[2].textContent = 'Todas';
+  if (plan.length && tFiltro === 'pend' && delGrupo.length && hq === delGrupo.length && !$('buscar').value) $('pegas').innerHTML = '<p class="empty"><span class="ico">🎉</span>¡Todas las pegas de tu grupo están reportadas!</p>';
+  document.documentElement.style.setProperty('--avance', (delGrupo.length ? Math.round(hq * 100 / delGrupo.length) : 0) + '%');
   const pc = delGrupo.length ? Math.round(h * 100 / delGrupo.length) : 0;
   $('avance').innerHTML = delGrupo.length ? `<span>Avance <b>${h} de ${delGrupo.length}</b></span><div class="barra${h === delGrupo.length ? ' listo' : ''}"><i style="width:${pc}%"></i></div><b>${pc}%</b>` : '';
   pintarFlota();
@@ -647,16 +763,32 @@ function textoStd(c) {
   if (/v[aá]lvula|grifo|hidrante|bifurca|monitor/.test(c)) return 'se realiza limpieza mediante hidrolavado y se lubrican partes móviles';
   return 'se realiza inspección y limpieza del componente';
 }
+// "Válvula Mariposa N°04A" -> "Válvula Mariposa"
+function nombreComp(c) { return String(c || '').replace(/\s*N\s*[°º]\s*\S+/gi, '').replace(/\s+/g, ' ').trim() || 'Componente'; }
 let autoDesc = '';
 function autoTexto() {
   const d = $('desc'), p = plan.find(x => x.k === sel);
   const noHecho = est === 'nr' || est === 'qp';
-  const nuevo = (!p || noHecho) ? '' : textoStd(p.c);
+  const nuevo = (!p || noHecho) ? '' : nombreComp(p.c) + ': ' + textoStd(p.c);
   if (d.value.trim() === '' || d.value === autoDesc) { d.value = nuevo; autoDesc = nuevo; }
 }
-$('pegas').addEventListener('click', e => { const b = e.target.closest('.pega'); if (!b) return; sel = b.dataset.k; pintarPegas(); autoTexto();
-  if (window.innerWidth < 900) setTimeout(() => irA($('elegida')), 30); });
-document.querySelectorAll('.eb').forEach(b => b.onclick = () => { est = b.dataset.v; try { navigator.vibrate && navigator.vibrate(15); } catch (e) {} document.querySelectorAll('.eb').forEach(x => x.classList.toggle('sel', x === b)); autoTexto(); });
+$('pegas').addEventListener('click', e => { const b = e.target.closest('.pega'); if (!b) return;
+  if (sel !== b.dataset.k) { sel = b.dataset.k; autoDesc = ''; $('desc').value = ''; }
+  pintarPegas(); autoTexto(); abrirHoja('hRep'); });
+$('eCambiar').onclick = () => cerrarHoja('hRep');
+function pintarObs() { $('obsBox').style.display = est && est !== 'ok' ? 'block' : 'none'; }
+// pulgadas con un toque
+function pintarPulg() {
+  const v = $('pulg').value.trim(); let hay = false;
+  document.querySelectorAll('#pChips button').forEach(b => { const on = b.dataset.p !== 'otra' && b.dataset.p === v; if (on) hay = true; b.classList.toggle('on', on); });
+  const otra = !!v && !hay; document.querySelector('#pChips [data-p=otra]').classList.toggle('on', otra || $('pulg').style.display === 'block');
+  if (otra) $('pulg').style.display = 'block';
+}
+$('pChips').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.p === 'otra') { $('pulg').style.display = 'block'; if (document.querySelector('#pChips button.on:not([data-p=otra])')) $('pulg').value = ''; pintarPulg(); $('pulg').focus(); return; }
+  $('pulg').value = $('pulg').value === b.dataset.p ? '' : b.dataset.p; $('pulg').style.display = 'none'; pintarPulg(); });
+$('pulg').addEventListener('input', pintarPulg);
+document.querySelectorAll('.eb').forEach(b => b.onclick = () => { est = b.dataset.v; try { navigator.vibrate && navigator.vibrate(15); } catch (e) {} document.querySelectorAll('.eb').forEach(x => x.classList.toggle('sel', x === b)); autoTexto(); pintarObs(); });
 
 function achicar(img, max, q) {
   const k = Math.min(1, max / Math.max(img.width, img.height));
@@ -682,7 +814,7 @@ $('guardar').onclick = async () => {
   const p = plan.find(x => x.k === sel);
   const d = {uid:uid(), n:p.n, c:p.c, t:p.t, u:p.u, g:p.g, a:p.a, act:p.act, raw:p.raw, lider:p.l || '', fecha, foto, mini, estado:EST[est], obs:o,
     pulg:$('pulg').value.trim(), desc:$('desc').value.trim(), rp:$('rep').value.trim(), rpc:$('rpc').value.trim(), rps:$('rps').value.trim(), tec};
-  const limpiar = t => { msg(t, 'ok'); sel = null; est = null; foto = null; mini = null; ['obs','rep','rpc','rps','pulg','desc'].forEach(i => $(i).value = ''); autoDesc = ''; $('foto').value = ''; $('prev').style.display = 'none'; $('fotoOk').style.display = 'none'; document.querySelectorAll('.eb').forEach(x => x.classList.remove('sel')); $('guardar').disabled = false; };
+  const limpiar = t => { msg(t, 'ok'); sel = null; est = null; foto = null; mini = null; ['obs','rep','rpc','rps','pulg','desc'].forEach(i => $(i).value = ''); autoDesc = ''; $('foto').value = ''; $('prev').style.display = 'none'; $('fotoOk').style.display = 'none'; document.querySelectorAll('.eb').forEach(x => x.classList.remove('sel')); $('guardar').disabled = false; $('pulg').style.display = 'none'; pintarPulg(); pintarObs(); };
   const local = async () => { try { await encolar(d); estados[p.k] = estados[p.k] || d.estado; limpiar(`📦 Pega ${p.n} guardada en el celular. Se enviará sola cuando haya señal.`); toast(`📦 Pega ${p.n} guardada, se envía con señal`); refrescarCola(); pintarPegas(); listaArriba(p.k); } catch (e) { msg('Sin señal y no se pudo guardar en el celular. Intenta de nuevo.', 'err'); $('guardar').disabled = false; } };
   $('guardar').disabled = true; pintarFlota();
   if (!navigator.onLine || sinRed) return local();
@@ -694,8 +826,8 @@ $('guardar').onclick = async () => {
 function listaArriba(k) {
   recien = k; setTimeout(() => { recien = null; }, 1500);
   siguiente(k);
-  const c = $('pegas').closest('.card');
-  setTimeout(() => irA(c), 350);
+  if (sel) { $('hRep').scrollTop = 0; toast(`✅ Pega ${k.split('|')[0]} lista · sigue la ${sel.split('|')[0]}`, 'ok'); }
+  else cerrarHoja('hRep');
 }
 
 // ---------- Oficina ----------
@@ -754,22 +886,72 @@ function pintarOficina() {
     .sort((a, b) => ord === 'e' ? (PRIO[a.e] - PRIO[b.e] || a.n.localeCompare(b.n))
                   : ord === 'tec' ? (String(a.tec).localeCompare(String(b.tec)) || a.n.localeCompare(b.n))
                   : a.n.localeCompare(b.n));
-  $('reps').innerHTML = l.map(r => { const c = COD(r.e), fl = formsLink(r); return `<div class="card rep">
-    ${r.mini ? `<img src="${r.mini}" alt="Foto pega ${esc(r.n)}" data-ver="${esc(r.id)}" style="cursor:pointer">` : '<div class="ph">Sin foto</div>'}
-    <div><h3>${esc(r.n)} · ${esc(r.c)}</h3><p>${esc(r.t)}</p>
-    <p><span class="tag t-${c}">${esc(r.e)}</span> ${r.o ? '· ' + esc(r.o) : ''}</p>
-    ${r.pulg ? `<p>Pulgadas: ${esc(r.pulg)}"</p>` : ''}${r.desc ? `<p>Qué se hizo: ${esc(r.desc)}</p>` : ''}
-    ${r.rp ? `<p>Rep. Sercoing: ${esc(r.rp)}</p>` : ''}${r.rpc ? `<p>Rep. Codelco: ${esc(r.rpc)}</p>` : ''}${r.rps ? `<p>Rep. solicitados: ${esc(r.rps)}</p>` : ''}
-    <p>${esc(r.tec)}${r.lider ? ' · ' + esc(r.lider) : ''} · ${esc(r.hora)}${r.editado ? ' · editado ' + esc(r.editado) : ''}</p>
-    ${r.guia ? `<p style="color:var(--ok);font-weight:600">Guía hecha · Folio ${esc(r.folio)}${r.infPor ? ' · ' + esc(r.infPor) : ''}</p>` : ''}
-    <div class="row">${fl ? `<a class="mini" style="display:inline-flex;align-items:center;text-decoration:none" href="${esc(fl)}" target="_blank" rel="noopener">Abrir Forms prellenado</a>` : ''}
-    <button class="mini" data-edit="${esc(r.id)}">✏️ Editar</button>
-    <button class="mini${r.guia ? ' done' : ''}" data-guia="${esc(r.id)}">${r.guia ? 'Desmarcar guía' : 'Marcar guía hecha'}</button></div></div></div>`; }).join('')
-    || `<p class="empty"><span class="ico">${filtro === 'pend' ? '🎉' : '🗂️'}</span>${filtro === 'hecha' ? 'Aún no hay guías marcadas como hechas.' : filtro === 'pend' ? 'No hay guías pendientes. ¡Todo al día!' : 'No hay reportes con ese filtro.'}</p>`;
+  const nf = [fl0, ft, fe].filter(Boolean).length;
+  $('ofRes').textContent = `${l.length} ${l.length === 1 ? 'reporte' : 'reportes'} · ${{e: 'problemas primero', n: 'por N°', tec: 'por técnico'}[ord]}${nf ? ` · ${nf} filtro${nf > 1 ? 's' : ''}` : ''}`;
+  $('ofFiltros').textContent = nf ? `⚙️ Filtros (${nf})` : '⚙️ Filtros';
+  $('kFs').textContent = ofi.reps.filter(r => r.e === 'Fuera de servicio').length;
+  $('kOb').textContent = ofi.reps.filter(r => r.e === 'Operativo con observación').length;
+  document.querySelectorAll('.kpi[data-k]').forEach(k => k.classList.toggle('on', k.dataset.k === fe));
+  $('reps').innerHTML = l.length ? '<div class="lista">' + l.map(r => { const c = COD(r.e); return `<button class="ritem" data-det="${esc(r.id)}">
+    ${r.mini ? `<img src="${r.mini}" alt="">` : '<span class="ph">📷</span>'}
+    <span class="tx"><b>${esc(r.n)} · ${esc(r.c)}</b><small>${esc(r.tec)}${r.lider ? ' · ' + esc(r.lider) : ''} · ${esc(String(r.hora).slice(-5))}${r.o ? ' · ' + esc(r.o) : ''}</small></span>
+    <span class="tag t-${c}">${esc(c === 'obs' ? 'Observación' : r.e)}</span>${r.guia ? '<span class="gok" title="Guía hecha">✓</span>' : ''}</button>`; }).join('') + '</div>'
+    : `<p class="vacio"><span class="ico">${filtro === 'pend' && !nf ? '🎉' : '🗂️'}</span>${filtro === 'hecha' ? 'Aún no hay guías marcadas como hechas.' : filtro === 'pend' && !nf ? 'No hay guías pendientes. ¡Todo al día!' : 'No hay reportes con ese filtro.'}</p>`;
+  $('sFal2').textContent = anterior ? '' : `(${ofi.plan.filter(p => !por[KEY(p.n, p.t)]).length})`;
   const f = ofi.plan.filter(p => !por[KEY(p.n, p.t)] && (!fl0 || p.l === fl0));
   $('faltan').innerHTML = anterior ? '<p class="empty">Para días anteriores no se compara con el plan.</p>' : f.map(p => `<div class="falta"><span><b>${esc(p.n)}</b> ${esc(p.c)}</span><span class="tag t-no">Pendiente</span></div>`).join('') || '<p class="empty"><span class="ico">✅</span>Todas las pegas tienen reporte.</p>';
 }
+// ---- detalle de un reporte (hoja desde abajo) ----
+const ID_FOTO = u => { const m = String(u || '').match(/\/d\/([^/?#]+)/) || String(u || '').match(/[?&]id=([^&]+)/); return m ? m[1] : ''; };
+const FOTO_G = id => 'https://drive.google.com/thumbnail?id=' + id + '&sz=w1600';
+const FOTO_DL = id => 'https://drive.google.com/uc?export=download&id=' + id;
+let detId = null;
+function abrirDetalle(id) {
+  const r = ofi.reps.find(x => x.id === id); if (!r) return; detId = id;
+  const c = COD(r.e), fl = formsLink(r), fid = ID_FOTO(r.url);
+  $('detBody').innerHTML = `<div class="det">
+    <div class="shead"><span class="n">${esc(r.n)}</span><div><b>${esc(r.c)}</b><small>${esc(r.t)}${r.u ? ' · ' + esc(r.u) : ''}</small></div><button class="x" data-cerrar aria-label="Cerrar">✕</button></div>
+    ${r.mini || fid ? `<img class="det-foto" src="${r.mini || FOTO_G(fid)}" data-foto="${esc(r.id)}" alt="Foto">` : ''}
+    ${fid ? `<a class="dl" href="${FOTO_DL(fid)}" target="_blank" rel="noopener">⬇️ Descargar foto</a>` : ''}
+    <p><span class="tag t-${c}">${esc(r.e)}</span></p>
+    ${r.o ? `<p>📝 ${esc(r.o)}</p>` : ''}${r.desc ? `<p>🔧 ${esc(r.desc)}</p>` : ''}${r.pulg ? `<p>📏 ${esc(r.pulg)}</p>` : ''}
+    ${r.rp ? `<p>Rep. Sercoing: ${esc(r.rp)}</p>` : ''}${r.rpc ? `<p>Rep. Codelco: ${esc(r.rpc)}</p>` : ''}${r.rps ? `<p>Rep. solicitados: ${esc(r.rps)}</p>` : ''}
+    <p style="color:var(--mut);font-size:13px">${esc(r.tec)}${r.lider ? ' · ' + esc(r.lider) : ''} · ${esc(r.hora)}${r.editado ? ' · editado ' + esc(r.editado) : ''}</p>
+    ${r.guia ? `<p style="color:var(--ok);font-weight:600">✓ Guía hecha · Folio ${esc(r.folio)}${r.infPor ? ' · ' + esc(r.infPor) : ''}</p>` : ''}
+    ${r.guia ? `<button class="btn sec" data-guia="${esc(r.id)}">Desmarcar guía</button>` : `<button class="btn" data-guia="${esc(r.id)}">✓ Marcar guía hecha</button>`}
+    <button class="btn sec" data-edit="${esc(r.id)}">✏️ Editar reporte</button>
+    ${fl ? `<a class="btn sec" style="display:flex;align-items:center;justify-content:center;text-decoration:none;margin-top:8px" href="${esc(fl)}" target="_blank" rel="noopener">Abrir Forms prellenado</a>` : ''}
+  </div>`;
+  abrirHoja('hDet');
+}
+function verFoto(titulo, src, id) {
+  $('vTit').textContent = titulo;
+  $('vBody').innerHTML = `<img src="${esc(src)}" alt="Foto">${id ? `<a class="dl" href="${FOTO_DL(id)}" target="_blank" rel="noopener">⬇️ Descargar foto</a>` : ''}`;
+  $('visor').classList.add('on'); document.body.style.overflow = 'hidden';
+}
+$('detBody').addEventListener('click', async e => {
+  const ft = e.target.closest('[data-foto]');
+  if (ft) { const r = ofi.reps.find(x => x.id === ft.dataset.foto), fid = ID_FOTO(r.url); return verFoto(`${r.n} · ${r.c}`, fid ? FOTO_G(fid) : r.mini, fid); }
+  const g = e.target.closest('[data-guia]'), ed = e.target.closest('[data-edit]');
+  if (ed) { cerrarHoja('hDet'); return abrirEditar(ofi.reps.find(x => x.id === ed.dataset.edit)); }
+  if (g) {
+    const r = ofi.reps.find(x => x.id === g.dataset.guia);
+    if (!r.guia) { cerrarHoja('hDet'); return pedirFolio(r); }
+    g.disabled = true;
+    try { await call('marcarGuia', r.id, false, '', ''); r.guia = false; r.folio = ''; r.infPor = ''; pintarOficina(); abrirDetalle(r.id); toast('Guía desmarcada'); }
+    catch (x) { g.disabled = false; alertar('No se pudo desmarcar: ' + x.message); }
+  }
+});
+$('ofFiltros').onclick = () => abrirHoja('hFil');
+$('filLimpiar').onclick = () => { ['fLider','fTec','fEst'].forEach(i => $(i).value = ''); pintarOficina(); cerrarHoja('hFil'); };
+document.querySelectorAll('.kpi[data-k]').forEach(k => k.onclick = () => {
+  if (k.dataset.k === 'sin') { $('faltd').open = true; $('faltd').scrollIntoView({behavior: 'smooth', block: 'start'}); return; }
+  $('fEst').value = $('fEst').value === k.dataset.k ? '' : k.dataset.k;
+  if ($('fEst').value) { filtro = 'todas'; document.querySelectorAll('.fb[data-f]').forEach(x => x.classList.toggle('on', x.dataset.f === 'todas')); }
+  pintarOficina();
+});
 $('reps').addEventListener('click', async e => {
+  const dt = e.target.closest('[data-det]'); if (dt) return abrirDetalle(dt.dataset.det);
   const g = e.target.closest('[data-guia]'), v = e.target.closest('[data-ver]'), ed = e.target.closest('[data-edit]');
   if (ed) return abrirEditar(ofi.reps.find(x => x.id === ed.dataset.edit));
   if (g) {
@@ -842,14 +1024,14 @@ $('modal').onclick = e => { if (e.target === $('modal')) $('modal').classList.re
 function pintarFlota() {
   const p = sel && plan.find(x => x.k === sel);
   $('elegida').classList.toggle('on', !!p);
-  if (p) { $('eN').textContent = p.n; $('eC').textContent = p.c; }
+  if (p) { $('eN').textContent = p.n; $('eC').textContent = p.c; $('eT').textContent = [p.u, p.t].filter(Boolean).join(' · '); $('guardar').textContent = $('guardar').disabled ? 'Enviando…' : `Enviar pega ${p.n}`; }
   const env = $('guardar').disabled;
   $('flota').classList.toggle('on', !!p && vista === 'terreno');
   $('flota').disabled = env;
   if (p) $('flota').textContent = env ? 'Enviando…' : `Enviar pega ${p.n}`;
 }
 $('flota').onclick = () => $('guardar').click();
-$('eCambiar').onclick = () => irA($('pegas').closest('.card'));
+
 // aviso que aparece arriba
 let tt;
 function toast(t, tipo) { $('toast').textContent = t; $('toast').className = 'toast on ' + (tipo || ''); clearTimeout(tt); tt = setTimeout(() => $('toast').classList.remove('on'), 3200); try { navigator.vibrate && navigator.vibrate(60); } catch (e) {} }
@@ -860,7 +1042,7 @@ function siguiente(k) {
   if (!n) { toast('🎉 Terminaste todas las pegas de tu grupo'); return; }
   sel = n.k; pintarPegas(); autoTexto();
   const b = document.querySelector(`.pega[data-k="${CSS.escape(n.k)}"]`);
-  if (b) { const l = $('pegas'); l.scrollTo({top: b.offsetTop - l.offsetTop - 8, behavior: 'smooth'}); }
+
 }
 
 // baja suave hasta un elemento, contando que la barra de arriba se achica
@@ -888,39 +1070,65 @@ window.addEventListener('scroll', () => {
 // ---------- Documentos ----------
 const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>';
 const CATC = {'ART':'art', 'Check list':'chk', 'Aprendizajes de la semana':'apr', 'Charla fin de semana':'cha'};
-async function cargarDocs() {
-  $('dFechaCard').style.display = dSec === 'Diario' ? 'block' : 'none';
-  $('docs').innerHTML = ESQ;
-  try {
-    const l = docsL = await call('getDocs', dSec, dSec === 'Diario' ? $('dFecha').value.trim() : '');
-    if (!l.length) { $('docs').innerHTML = `<p class="empty"><span class="ico">📂</span>${dSec === 'Diario' ? 'No hay documentos para ese día.' : 'Aún no hay documentos generales.'}<br>Súbelos con el botón rojo.</p>`; return; }
-    const grupos = {};
-    l.forEach(d => { (grupos[d.cat] = grupos[d.cat] || []).push(d); });
-    $('docs').innerHTML = Object.keys(grupos).map(g => `<p class="grupo">${esc(g)}</p>` + grupos[g].map(d => `<div class="card doc">
-      <div class="ic">${ICON}</div>
-      <div><h3>${esc(d.tit)}</h3>
-        <p><span class="cat ${CATC[d.cat] || ''}">${esc(d.cat)}</span>${esc(d.fecha)}${d.por ? ' · ' + esc(d.por) : ''}</p>
-        ${d.nota ? `<p style="color:var(--ink);white-space:pre-line">${esc(d.nota)}</p>` : ''}
-        ${(d.pags || []).length ? `<div class="dthumbs">${d.pags.map((u, i) => `<img src="${esc((d.minis || [])[i] || u)}" alt="Hoja ${i + 1}" loading="lazy" data-ver="${esc(d.id)}" data-i="${i}">`).join('')}</div>` : ''}
-        <div class="row" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
-          ${(d.pags || []).length ? `<button class="mini" data-ver="${esc(d.id)}" data-i="0">👁️ Ver ${d.pags.length > 1 ? d.pags.length + ' hojas' : 'documento'}</button>` : ''}
-          ${d.url ? `<a class="mini" style="display:inline-flex;align-items:center;text-decoration:none" href="${esc(d.url)}" target="_blank" rel="noopener">📄 Abrir ${esc(d.nombre || 'archivo')}</a>` : ''}
-          <button class="mini" data-borrar="${esc(d.id)}">🗑️ Borrar</button>
-        </div></div></div>`).join('')).join('');
-  } catch (e) { $('docs').innerHTML = `<p class="empty err">No se pudo cargar: ${esc(e.message)}</p>`; }
+// Documentos: se guardan en el celular para verlos sin señal
+const DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+function fechaBonita(f) { const m = /^(\d{2})-(\d{2})-(\d{4})$/.exec(f || ''); if (!m) return f || ''; const d = new Date(+m[3], +m[2] - 1, +m[1]); const t = DIAS[d.getDay()]; return (f === hoyTxt() ? 'Hoy, ' : t[0].toUpperCase() + t.slice(1) + ' ') + f; }
+function docsGuardados() { try { return JSON.parse(localStorage.getItem('rh_docs_cel') || '[]'); } catch (e) { return []; } }
+function guardarDocs(sec, f, l) {
+  try { const todos = docsGuardados().filter(d => !(d.sec === sec && (sec === 'General' || d.fecha === f))); localStorage.setItem('rh_docs_cel', JSON.stringify(l.concat(todos).slice(0, 300))); } catch (e) {}
 }
+// Baja a este celular los documentos generales y los de la última semana (para verlos sin internet)
+let precargando = false;
+async function precargarDocs() {
+  if (precargando || !navigator.onLine) return; precargando = true;
+  try {
+    const l = await call('getDocsCelular');
+    try { localStorage.setItem('rh_docs_cel', JSON.stringify(l)); } catch (e) {}
+    const urls = []; l.forEach(d => (d.minis || []).concat(d.pags || []).forEach(u => urls.push(u)));
+    for (const u of urls) { try { await fetch(u, {mode: 'no-cors'}); } catch (e) {} }
+  } catch (e) {}
+  precargando = false;
+}
+function pintarDocs(l, sinRed) {
+  docsL = l;
+  if (!l.length) { $('docs').innerHTML = `<p class="vacio"><span class="ico">📂</span>${sinRed ? 'Sin señal y este celular no tiene guardados documentos de ' + (dSec === 'Diario' ? 'ese día' : 'esta sección') + '.' : dSec === 'Diario' ? 'No hay documentos para ese día.' : 'Aún no hay documentos generales.'}<br>Súbelos con el botón rojo.</p>`; return; }
+  $('docs').innerHTML = (sinRed ? '<p class="hint" style="margin:0 0 8px">📴 Sin señal: mostrando lo guardado en el celular.</p>' : '') + l.map(d => {
+    const n = (d.pags || []).length, mini = (d.minis || [])[0] || (d.pags || [])[0];
+    return `<div class="doc2" data-ver="${esc(d.id)}" data-i="0">
+      ${mini ? `<img class="pv" src="${esc(mini)}" alt="" loading="lazy">` : `<span class="pv">${d.url ? '📎' : '📝'}</span>`}
+      <div class="tx"><span class="cat ${CATC[d.cat] || ''}">${esc(d.cat)}</span><b>${esc(d.tit)}</b>
+        <small>${n ? n + (n > 1 ? ' hojas' : ' hoja') : d.url ? esc(d.nombre || 'archivo') : 'nota'}${dSec === 'General' ? ' · ' + esc(d.fecha) : d.hora ? ' · ' + esc(d.hora) : ''}${d.por ? ' · ' + esc(d.por) : ''}</small>
+        ${d.nota ? `<small style="display:block;color:var(--ink);white-space:pre-line;margin-top:4px">${esc(d.nota)}</small>` : ''}</div></div>`; }).join('');
+}
+async function cargarDocs() {
+  $('dFechaCard').style.display = dSec === 'Diario' ? 'flex' : 'none';
+  if (!$('dFecha').value) $('dFecha').value = hoyTxt();
+  $('dFechaTxt').textContent = fechaBonita($('dFecha').value);
+  const f = dSec === 'Diario' ? $('dFecha').value.trim() : '';
+  const local = docsGuardados().filter(d => d.sec === dSec && (dSec === 'General' || d.fecha === f));
+  if (local.length) pintarDocs(local); else $('docs').innerHTML = ESQ;
+  try { const l = await call('getDocs', dSec, f); guardarDocs(dSec, f, l); pintarDocs(l); }
+  catch (e) { pintarDocs(local, true); }
+}
+$('dFechaPick').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [y, m, d] = v.split('-'); $('dFecha').value = `${d}-${m}-${y}`; cargarDocs(); });
 document.querySelectorAll('.fb[data-d]').forEach(b => b.onclick = () => { dSec = b.dataset.d; document.querySelectorAll('.fb[data-d]').forEach(x => x.classList.toggle('on', x === b)); cargarDocs(); });
-$('dFecha').addEventListener('change', cargarDocs);
-$('docs').addEventListener('click', async e => {
+
+$('vBody').addEventListener('click', e => {
   const b = e.target.closest('[data-borrar]'); if (!b) return;
-  abrirPin('Borrar documento', async pin => { await call('borrarDoc', pin, b.dataset.borrar); cargarDocs(); });
+  abrirPin('Borrar documento', async pin => { await call('borrarDoc', pin, b.dataset.borrar); $('visor').classList.remove('on'); document.body.style.overflow = ''; try { localStorage.setItem('rh_docs_cel', JSON.stringify(docsGuardados().filter(d => d.id !== b.dataset.borrar))); } catch (x) {} cargarDocs(); });
 });
-let docsL = [], pags = [];
+
 // visor de hojas dentro de la app
 function verDoc(id, i) {
   const d = docsL.find(x => x.id === id); if (!d) return;
+  if (!(d.pags || []).length && d.url && !d.nota) { window.open(d.url, '_blank'); return; }
+  d.pags = d.pags || [];
   $('vTit').textContent = d.tit;
-  $('vBody').innerHTML = d.pags.map((u, k) => `<small>Hoja ${k + 1} de ${d.pags.length}</small><img src="${esc(u)}" alt="Hoja ${k + 1}">`).join('');
+  const ids = d.ids || d.pags.map(u => (String(u).match(/[?&]id=([^&]+)/) || [])[1]);
+  $('vBody').innerHTML = (d.nota ? `<p style="color:#fff;white-space:pre-line;max-width:900px;width:100%">${esc(d.nota)}</p>` : '')
+    + d.pags.map((u, k) => `<small>Hoja ${k + 1} de ${d.pags.length}</small><img src="${esc(u)}" alt="Hoja ${k + 1}">${ids[k] ? `<a class="dl" href="${FOTO_DL(ids[k])}" target="_blank" rel="noopener">⬇️ Descargar hoja ${k + 1}</a>` : ''}`).join('')
+    + (d.url ? `<a class="dl" href="${esc(d.url)}" target="_blank" rel="noopener">📎 Abrir ${esc(d.nombre || 'archivo')}</a>` : '')
+    + `<button class="mini" data-borrar="${esc(d.id)}" style="margin:10px 0 30px;background:transparent;color:#9aa3b8;border-color:#3a3e58">🗑️ Borrar este documento</button>`;
   $('visor').classList.add('on'); document.body.style.overflow = 'hidden';
   const im = $('vBody').querySelectorAll('img')[i]; if (im) setTimeout(() => im.scrollIntoView({block: 'start'}), 50);
 }
@@ -988,22 +1196,42 @@ $('dArch').addEventListener('change', e => {
   rd.onload = () => { archivo = {nombre: f.name, tipo: f.type || 'application/octet-stream', b64: String(rd.result).split(',')[1]}; $('dArchNom').textContent = '📎 ' + f.name; };
   rd.readAsDataURL(f);
 });
+const CAT_CORTO = {'Charla fin de semana': 'Charla', 'Aprendizajes de la semana': 'Aprendizajes'};
+const CAT_GENERAL = ['Procedimiento'];
+let titManual = false;
+function pinDocs() { try { return localStorage.getItem('rh_pin_docs') || ''; } catch (e) { return ''; } }
+function tituloAuto() {
+  if (!titManual) $('dTit').value = (CAT_CORTO[$('dCat').value] || $('dCat').value) + ' ' + ($('dSec').value === 'Diario' ? $('dFec').value : '').trim();
+  $('dTitTxt').textContent = $('dTit').value.trim() || '(sin título)';
+}
+function ponerDonde(sec) { $('dSec').value = sec; document.querySelectorAll('#dDonde button').forEach(b => b.classList.toggle('on', b.dataset.s === sec)); tituloAuto(); }
+document.querySelectorAll('#dTipos button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#dTipos button').forEach(x => x.classList.toggle('on', x === b)); $('dCat').value = b.dataset.c;
+  ponerDonde(CAT_GENERAL.indexOf(b.dataset.c) >= 0 ? 'General' : 'Diario');
+});
+document.querySelectorAll('#dDonde button').forEach(b => b.onclick = () => ponerDonde(b.dataset.s));
+$('dEditar').onclick = () => { $('dMasBox').style.display = $('dMasBox').style.display === 'block' ? 'none' : 'block'; };
+$('dTit').addEventListener('input', () => { titManual = true; tituloAuto(); });
+$('dFec').addEventListener('input', tituloAuto);
 $('dNuevo').onclick = () => {
-  $('dSec').value = dSec; $('dTit').value = ''; $('dNota').value = ''; $('dArch').value = ''; archivo = null; pags = []; pintarPags(); $('dArchNom').textContent = ''; $('dMsg').textContent = '';
-  $('dFec').value = $('dFecha').value || hoyTxt();
-  $('mDoc').classList.add('on');
+  titManual = false; $('dNota').value = ''; $('dArch').value = ''; archivo = null; pags = []; pintarPags(); $('dArchNom').textContent = ''; $('dMsg').textContent = ''; $('dMasBox').style.display = 'none';
+  $('dFec').value = dSec === 'Diario' ? ($('dFecha').value || hoyTxt()) : hoyTxt();
+  const t = document.querySelector('#dTipos button.on') || document.querySelector('#dTipos button'); $('dCat').value = t.dataset.c;
+  ponerDonde(dSec);
+  $('dPin').value = pinDocs(); $('dPinBox').style.display = pinDocs() ? 'none' : 'block';
+  abrirHoja('mDoc');
 };
-$('dCancel').onclick = () => $('mDoc').classList.remove('on');
+$('dCancel').onclick = () => cerrarHoja('mDoc');
 $('dOk').onclick = async () => {
   const meta = {sec: $('dSec').value, cat: $('dCat').value, tit: $('dTit').value.trim(), fecha: $('dFec').value.trim(), nota: $('dNota').value.trim()};
   try { meta.por = localStorage.getItem('rh_ofi') || localStorage.getItem('rh_tec') || ''; } catch (e) {}
-  if (!meta.tit) { $('dMsg').textContent = 'Escribe un título'; return; }
+  if (!meta.tit) { $('dMasBox').style.display = 'block'; $('dMsg').textContent = 'Escribe un título'; return; }
   if (!/^\d{2}-\d{2}-\d{4}$/.test(meta.fecha)) { $('dMsg').textContent = 'Fecha en formato dd-mm-aaaa'; return; }
   if (!archivo && !pags.length && !meta.nota) { $('dMsg').textContent = 'Saca una foto, agrega un archivo o escribe una nota'; return; }
-  if (!$('dPin').value.trim()) { $('dMsg').textContent = 'Escribe el PIN'; return; }
+  if (!$('dPin').value.trim()) { $('dPinBox').style.display = 'block'; $('dMsg').textContent = 'Escribe el PIN'; return; }
   $('dOk').disabled = true; $('dMsg').textContent = (archivo || pags.length) ? `Subiendo${pags.length ? ' ' + pags.length + (pags.length > 1 ? ' hojas' : ' hoja') : ''}…` : 'Guardando…';
-  try { await call('subirDoc', $('dPin').value.trim(), meta, archivo, pags.map(p => p.out.split(',')[1])); $('mDoc').classList.remove('on'); dSec = meta.sec; document.querySelectorAll('.fb[data-d]').forEach(x => x.classList.toggle('on', x.dataset.d === dSec)); if (dSec === 'Diario') $('dFecha').value = meta.fecha; cargarDocs(); }
-  catch (x) { $('dMsg').textContent = 'Error: ' + x.message; }
+  try { await call('subirDoc', $('dPin').value.trim(), meta, archivo, pags.map(p => p.out.split(',')[1])); try { localStorage.setItem('rh_pin_docs', $('dPin').value.trim()); } catch (e) {} cerrarHoja('mDoc'); toast('✅ Documento subido', 'ok'); precargarDocs(); dSec = meta.sec; document.querySelectorAll('.fb[data-d]').forEach(x => x.classList.toggle('on', x.dataset.d === dSec)); if (dSec === 'Diario') $('dFecha').value = meta.fecha; cargarDocs(); }
+  catch (x) { if (/PIN/.test(x.message)) { try { localStorage.removeItem('rh_pin_docs'); } catch (e) {} $('dPin').value = ''; $('dPinBox').style.display = 'block'; } $('dMsg').textContent = 'Error: ' + x.message; }
   $('dOk').disabled = false;
 };
 // PIN simple en ventana (para borrar)
@@ -1095,11 +1323,25 @@ if (!EN_GOOGLE && 'serviceWorker' in navigator) {
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); pedirInstalar = e; if (!INSTALADA) $('instalar').classList.add('on'); });
 window.addEventListener('appinstalled', () => { $('instalar').classList.remove('on'); toast('✅ App instalada. Ábrela desde el ícono', 'ok'); });
 if (!EN_GOOGLE && IOS && !INSTALADA) $('instalar').classList.add('on');
-$('instalar').onclick = async () => {
+// la primera vez, avisa dónde instalarla
+setTimeout(() => { try { if (!EN_GOOGLE && !INSTALADA && $('instalar').classList.contains('on') && !localStorage.getItem('rh_aviso_inst')) { toast('📲 Instala la app desde ⋯ Más → Instalar la app'); localStorage.setItem('rh_aviso_inst', '1'); } } catch (e) {} }, 2500);
+$('instalar').onclick = async () => { cerrarHoja();
   if (pedirInstalar) { pedirInstalar.prompt(); try { await pedirInstalar.userChoice; } catch (e) {} pedirInstalar = null; $('instalar').classList.remove('on'); }
   else if (IOS) $('mIos').classList.add('on');
 };
 $('iosOk').onclick = () => $('mIos').classList.remove('on');
+
+// ---------- Hojas que salen desde abajo ----------
+function abrirHoja(id) {
+  document.querySelectorAll('.sheet.on').forEach(h => { if (h.id !== id) h.classList.remove('on'); });
+  $('velo').classList.add('on'); $(id).classList.add('on'); $(id).scrollTop = 0;
+}
+function cerrarHoja(id) {
+  (id ? [$(id)] : document.querySelectorAll('.sheet.on')).forEach(h => h && h.classList.remove('on'));
+  if (!document.querySelector('.sheet.on')) $('velo').classList.remove('on');
+}
+$('velo').onclick = () => cerrarHoja();
+document.addEventListener('click', e => { const c = e.target.closest('[data-cerrar]'); if (c) cerrarHoja(); });
 
 // ---------- Botón "volver" del celular: pregunta antes de salir ----------
 const HIST = (window.google && google.script && google.script.history) ? google.script.history : null;
@@ -1114,6 +1356,8 @@ function alVolver() {
   if (abierta && abierta.id !== 'mSalir') {          // 1) si hay una ventana abierta, solo la cierra
     abierta.classList.remove('on'); document.body.style.overflow = ''; return;
   }
+  if (document.querySelector('.sheet.on')) { cerrarHoja(); return; }
+  if (['plan','hist','lid'].indexOf(vista) >= 0) { irVista(vistaMain === 'terreno' ? 'oficina' : vistaMain); return; }
   if (vista !== 'terreno') {                         // 2) si estás en otra pestaña, vuelve a Terreno
     document.querySelector('nav button[data-v="terreno"]').click(); return;
   }
@@ -1135,18 +1379,78 @@ window.addEventListener('beforeunload', e => { if (sel && (foto || est)) { e.pre
 
 $('recargar').onclick = () => { msg(''); cargar(); vaciarCola(); };
 
-document.querySelectorAll('nav button').forEach(b => b.onclick = () => {
-  vista = b.dataset.v;
-  document.querySelectorAll('nav button').forEach(x => x.classList.toggle('on', x === b));
-  document.querySelectorAll('section').forEach(s => s.classList.toggle('on', s.id === 'v-' + vista));
-  if (vista === 'oficina') cargarOficina();
-  if (vista === 'docs') cargarDocs();
+// ---------- Navegación: 3 pestañas + menú "Más" ----------
+function irVista(v) {
+  vista = v;
+  if (['terreno','oficina','docs'].indexOf(v) >= 0) vistaMain = v;
+  cerrarHoja();
+  document.querySelectorAll('nav button').forEach(x => x.classList.toggle('on', x.dataset.v === v || (x.dataset.v === 'mas' && ['plan','hist','lid'].indexOf(v) >= 0)));
+  document.querySelectorAll('section').forEach(s => s.classList.toggle('on', s.id === 'v-' + v));
+  if (v === 'oficina') cargarOficina();
+  if (v === 'docs') cargarDocs();
+  if (v === 'hist') { buscarHist(); cargarHistorial(); }
   pintarFlota();
   window.scrollTo(0, 0);
+}
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => b.dataset.v === 'mas' ? abrirHoja('hMas') : irVista(b.dataset.v));
+document.querySelectorAll('[data-ir]').forEach(b => b.onclick = () => irVista(b.dataset.ir));
+document.querySelectorAll('[data-volver]').forEach(b => b.onclick = () => irVista(vistaMain));
+
+// ---------- Historial por fechas y estados ----------
+const aTxt = d => { const z = n => String(n).padStart(2, '0'); return `${z(d.getDate())}-${z(d.getMonth() + 1)}-${d.getFullYear()}`; };
+const deISO = v => { const [y, m, d] = String(v || '').split('-'); return d ? `${d}-${m}-${y}` : ''; };
+let hRango = 'semana';
+function rangoHist() {
+  const h = new Date();
+  if (hRango === 'hoy') return [aTxt(h), aTxt(h)];
+  if (hRango === 'mes') return [aTxt(new Date(h.getFullYear(), h.getMonth(), 1)), aTxt(h)];
+  if (hRango === 'otra') return [deISO($('hDesde').value), deISO($('hHasta').value)];
+  return [aTxt(new Date(h.getTime() - 6 * 864e5)), aTxt(h)];
+}
+const estHist = () => [...document.querySelectorAll('#hEst .chip.on')].map(b => b.dataset.e);
+let hSeq = 0;
+async function buscarHist() {
+  const [a, b] = rangoHist(), est = estHist(), yo = ++hSeq;
+  $('hMsg').textContent = '';
+  if (!a || !b) { $('hRes').innerHTML = '<p class="hint">Elige las dos fechas.</p>'; return; }
+  $('hRes').innerHTML = ESQ;
+  try {
+    const r = await call('getHistorial', a, b, est); if (yo !== hSeq) return;
+    $('hRes').innerHTML = `<div class="kpis" style="margin-top:4px"><div class="kpi"><b style="color:var(--fs)">${r.fs}</b><small>fuera de servicio</small></div><div class="kpi"><b style="color:#b07800">${r.obs}</b><small>con observación</small></div><div class="kpi"><b>${r.total}</b><small>pegas en total</small></div></div>
+      <p class="hint" style="margin:0 0 8px">${a === b ? a : a + ' al ' + b} · <b>${r.encontradas}</b> ${r.encontradas === 1 ? 'pega' : 'pegas'} con ${est.length ? 'los estados marcados' : 'cualquier estado'}${r.encontradas > r.filas.length ? ` (se muestran las ${r.filas.length} más nuevas; el Excel trae todas)` : ''}</p>`
+      + (r.filas.length ? '<div class="lista" style="margin-bottom:12px">' + r.filas.map(f => `<div class="ritem" style="cursor:default">${f.foto ? `<img src="https://drive.google.com/thumbnail?id=${esc(f.foto)}&sz=w200" alt="" loading="lazy">` : '<span class="ph">📷</span>'}<span class="tx"><b>${esc(f.c)}</b><small>${esc(f.f)} · ${esc(f.u)}${f.o ? ' · ' + esc(f.o) : ''}</small></span><span class="tag t-${COD(f.e)}">${esc(CORTO[COD(f.e)])}</span></div>`).join('') + '</div>' : '<p class="vacio"><span class="ico">🎉</span>No hay pegas con esos estados en esas fechas.</p>');
+  } catch (e) { if (yo === hSeq) $('hRes').innerHTML = `<p class="empty err">No se pudo buscar: ${esc(e.message)}</p>`; }
+}
+document.querySelectorAll('#hRango .chip').forEach(b => b.onclick = () => {
+  hRango = b.dataset.r; document.querySelectorAll('#hRango .chip').forEach(x => x.classList.toggle('on', x === b));
+  $('hFechas').style.display = hRango === 'otra' ? 'grid' : 'none';
+  if (hRango === 'otra' && !$('hDesde').value) { const h = new Date(), iso = d => d.toISOString().slice(0, 10); $('hHasta').value = iso(h); $('hDesde').value = iso(new Date(h.getTime() - 6 * 864e5)); }
+  buscarHist();
 });
+['hDesde','hHasta'].forEach(i => $(i).addEventListener('change', buscarHist));
+document.querySelectorAll('#hEst .chip').forEach(b => b.onclick = () => { b.classList.toggle('on'); buscarHist(); });
+$('hExcel').onclick = async () => {
+  const [a, b] = rangoHist(), est = estHist();
+  if (!a || !b) return;
+  $('hExcel').disabled = true; $('hMsg').textContent = 'Generando Excel… puede tardar unos segundos'; $('hMsg').className = '';
+  try { const r = await call('exportarExcel', a, b, est); $('hMsg').innerHTML = `✅ ${r.n} ${r.n === 1 ? 'pega' : 'pegas'} · <a href="${esc(r.url)}" target="_blank" rel="noopener" style="color:var(--red)">Descargar ${esc(r.nombre)}.xlsx</a>`; $('hMsg').className = 'ok'; window.open(r.url, '_blank'); }
+  catch (e) { $('hMsg').textContent = '⚠️ ' + e.message; $('hMsg').className = 'err'; }
+  $('hExcel').disabled = false;
+};
+
+// ---------- Link para jefatura ----------
+function urlJefatura() { return EN_GOOGLE ? '' : new URL('jefatura.html', location.href.split('#')[0].split('?')[0]).href; }
+$('opJef').onclick = () => {
+  const u = urlJefatura();
+  if (!u) { cerrarHoja(); alertar('El link de jefatura se comparte desde la app instalada (la de GitHub).'); return; }
+  $('jUrl').value = u; $('jVer').href = u; abrirHoja('hJef');
+};
+$('jCopiar').onclick = async () => { try { await navigator.clipboard.writeText($('jUrl').value); toast('📋 Link copiado', 'ok'); } catch (e) { $('jUrl').select(); document.execCommand('copy'); toast('📋 Link copiado', 'ok'); } };
+$('jCompartir').onclick = async () => { const u = $('jUrl').value; if (navigator.share) { try { await navigator.share({title: 'Red Húmeda · Avance y documentos', text: 'Avance de pegas y documentos del día de Red Húmeda:', url: u}); } catch (e) {} } else window.open('https://wa.me/?text=' + encodeURIComponent('Avance de pegas y documentos del día de Red Húmeda: ' + u), '_blank'); };
 
 $('fotoCam').addEventListener('change', e => { const f = e.target.files[0]; if (!f) return; const dt = new DataTransfer(); dt.items.add(f); $('foto').files = dt.files; $('foto').dispatchEvent(new Event('change')); e.target.value = ''; });
-abrirDB().then(async () => { await refrescarCola(); await cargar(); vaciarCola(); });
+abrirDB().then(async () => { await refrescarCola(); await cargar(); vaciarCola(); setTimeout(precargarDocs, 1500); });
+window.addEventListener('online', () => setTimeout(precargarDocs, 3000));
 }
 </script>
 </body>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Red Húmeda · Avance del día</title>
+<meta name="theme-color" content="#272a40">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<script src="config.js"></script>
+<style>
+:root{--navy:#272a40;--red:#d0102b;--gris:#8f99ae;--bg:#f2f3f6;--line:#e1e3ea;--ink:#1f2233;--mut:#5f6478;--ok:#1d8a4e;--okb:#e3f4ea;--obs:#a86f00;--obsb:#fdf3d8;--fs:#d0102b;--fsb:#fde5e8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);font:15px/1.45 Inter,sans-serif;color:var(--ink)}
+header{background:var(--navy);color:#fff;padding:14px 16px 12px;position:sticky;top:0;z-index:5}
+.top{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.logo{font:800 20px Montserrat,sans-serif;letter-spacing:1px}.logo span{color:var(--red)}
+.top small{display:block;color:#aab1c5;font-size:12.5px}
+.franja{height:4px;background:linear-gradient(90deg,var(--red) var(--av,0%),#3a3e58 var(--av,0%));margin:10px auto 0;max-width:760px;border-radius:4px}
+main{max-width:760px;margin:0 auto;padding:14px}
+.fila{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.fila b{font:700 17px Montserrat,sans-serif;color:var(--navy)}
+.pick{position:relative;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-weight:600;color:var(--navy);font-size:14px;cursor:pointer}
+.pick input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.seg{display:flex;background:#e7e9ef;border-radius:12px;padding:3px;margin-bottom:12px}
+.seg button{flex:1;min-height:40px;border:0;border-radius:9px;background:transparent;color:var(--mut);font:600 14px Inter,sans-serif;cursor:pointer}
+.seg button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center}
+.kpi b{display:block;font:800 22px Montserrat,sans-serif;color:var(--navy)}.kpi small{color:var(--mut);font-size:12px}
+.barra{height:10px;border-radius:10px;background:#dfe2ea;overflow:hidden;margin-bottom:12px}.barra i{display:block;height:100%;background:var(--red)}
+.lista{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:12px}
+.it{display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid #f0f1f4}
+.it:last-child{border-bottom:0}
+.it .n{font:800 15px Montserrat,sans-serif;color:var(--navy);width:36px;flex:none}
+.it img,.it .ph{width:46px;height:46px;border-radius:10px;object-fit:cover;flex:none;background:#eceef3;display:grid;place-items:center;cursor:pointer}
+.it .tx{flex:1;min-width:0}.it .tx b{display:block;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.it .tx small{color:var(--mut);font-size:12.5px;display:block}
+.tag{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.t-ok{background:var(--okb);color:var(--ok)}.t-obs{background:var(--obsb);color:var(--obs)}.t-fs{background:var(--fsb);color:var(--fs)}.t-nr{background:#ece6f7;color:#5b3fa0}.t-p{background:#eef0f4;color:var(--mut)}
+.doc{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer}
+.doc .pv{width:56px;height:72px;border-radius:8px;border:1px solid var(--line);object-fit:cover;flex:none;background:#f3f4f7;display:grid;place-items:center;font-size:22px}
+.doc b{display:block;font-size:14.5px;margin-top:3px}.doc small{color:var(--mut);font-size:12.5px}
+.cat{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;background:#eef0f4;color:var(--navy)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:50px;border:0;border-radius:12px;background:var(--red);color:#fff;font:700 16px Montserrat,sans-serif;text-decoration:none;cursor:pointer}
+.btn[disabled]{opacity:.6}
+.vacio{text-align:center;color:var(--mut);padding:28px 10px}.vacio span{display:block;font-size:30px}
+.nota{color:var(--mut);font-size:13px;text-align:center;margin:14px 0 30px}
+.visor{position:fixed;inset:0;background:#15172a;z-index:20;display:none;flex-direction:column}
+.visor.on{display:flex}
+.vtop{display:flex;align-items:center;gap:10px;padding:12px;color:#fff;font:600 14px Montserrat,sans-serif}
+.vtop span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vtop button{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:10px;padding:8px 12px;font:600 14px Inter,sans-serif;cursor:pointer}
+.vbody{flex:1;overflow:auto;padding:0 10px 30px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.vbody img{width:100%;max-width:900px;border-radius:6px;background:#fff}
+.vbody small{color:#9aa3b8}
+.dl{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 16px;border-radius:12px;background:var(--red);color:#fff;font:700 14px Inter,sans-serif;text-decoration:none;margin-bottom:10px}
+.err{color:var(--fs);text-align:center;padding:20px}
+.esq i{display:block;height:58px;border-radius:12px;margin-bottom:8px;background:linear-gradient(90deg,#eceef3 25%,#f6f7f9 50%,#eceef3 75%);background-size:200% 100%;animation:b 1.2s linear infinite}
+@keyframes b{from{background-position:200% 0}to{background-position:-200% 0}}
+</style>
+</head>
+<body>
+<header><div class="top"><div><div class="logo">SERC<span>O</span>ING</div><small id="sub">Red Húmeda · cargando…</small></div></div><div class="franja" id="franja"></div></header>
+<main>
+  <div class="fila"><b id="dia">–</b><label class="pick">📅 Otro día<input type="date" id="pick"></label></div>
+  <div class="seg"><button class="on" data-t="docs">📄 Documentos del día</button><button data-t="pegas">📈 Avance de pegas</button></div>
+  <div id="vDocs"><div class="esq"><i></i><i></i><i></i></div></div>
+  <div id="vPegas" style="display:none"></div>
+  <p class="nota" id="nota">Se actualiza solo cada minuto.</p>
+</main>
+<div class="visor" id="visor"><div class="vtop"><span id="vTit"></span><button id="vX">✕ Cerrar</button></div><div class="vbody" id="vBody"></div></div>
+<script>
+(function () {
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const G = id => 'https://drive.google.com/thumbnail?id=' + id + '&sz=w1600', M = id => 'https://drive.google.com/thumbnail?id=' + id + '&sz=w200';
+const DL = id => 'https://drive.google.com/uc?export=download&id=' + id;
+const COD = {'Operativo': 'ok', 'Operativo con observación': 'obs', 'Fuera de servicio': 'fs', 'No realizada': 'nr', 'Quiebre de programa': 'nr'};
+const DIAS = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+let fecha = new URLSearchParams(location.search).get('f') || '', datos = null, tab = 'docs';
+function api(fn, ...args) {
+  return fetch(window.RH_API, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify({fn, args}), redirect: 'follow'})
+    .then(r => r.json()).then(j => { if (!j.ok) throw new Error(j.error); return j.r; });
+}
+function diaBonito(f) { const m = /^(\d{2})-(\d{2})-(\d{4})$/.exec(f); if (!m) return f; const d = new Date(+m[3], +m[2] - 1, +m[1]); return (datos && f === datos.hoy ? 'Hoy · ' : DIAS[d.getDay()] + ' ') + f; }
+async function cargar() {
+  try {
+    datos = await api('getJefatura', fecha);
+    fecha = datos.fecha;
+    $('dia').textContent = diaBonito(datos.fecha);
+    $('sub').textContent = 'Red Húmeda · actualizado ' + datos.hora;
+    const av = datos.total ? Math.round(datos.hechas * 100 / datos.total) : 0;
+    $('franja').style.setProperty('--av', av + '%');
+    pintar();
+  } catch (e) { $(tab === 'docs' ? 'vDocs' : 'vPegas').innerHTML = `<p class="err">No se pudo cargar (${esc(e.message)}). Revisa la señal.</p>`; }
+}
+function pintar() {
+  const d = datos.docs || [];
+  $('vDocs').innerHTML = d.length ? d.map((x, i) => `<div class="doc" data-doc="${i}">${(x.minis || [])[0] ? `<img class="pv" src="${esc(x.minis[0])}" alt="">` : `<span class="pv">${x.url ? '📎' : '📝'}</span>`}
+      <div><span class="cat">${esc(x.cat)}</span><b>${esc(x.tit)}</b><small>${(x.ids || []).length ? x.ids.length + ((x.ids.length > 1) ? ' hojas' : ' hoja') : x.url ? esc(x.nombre || 'archivo') : 'nota'}${x.hora ? ' · ' + esc(x.hora) : ''}${x.por ? ' · ' + esc(x.por) : ''}</small></div></div>`).join('')
+    : '<p class="vacio"><span>📂</span>No hay documentos subidos para este día.</p>';
+  const p = datos.pegas || [];
+  const av = datos.total ? Math.round(datos.hechas * 100 / datos.total) : 0;
+  $('vPegas').innerHTML = `<div class="kpis"><div class="kpi"><b>${datos.hechas}/${datos.total}</b><small>pegas hechas</small></div><div class="kpi"><b style="color:var(--fs)">${datos.fs}</b><small>fuera de servicio</small></div><div class="kpi"><b style="color:var(--obs)">${datos.obs}</b><small>con observación</small></div></div>
+    <div class="barra"><i style="width:${av}%"></i></div>
+    ${p.length ? '<div class="lista">' + p.map((x, i) => `<div class="it"><span class="n">${esc(x.n)}</span>${x.foto ? `<img src="${M(x.foto)}" data-foto="${i}" alt="" loading="lazy">` : ''}<div class="tx"><b>${esc(x.c)}</b><small>${esc(x.u || '')}${x.hora ? ' · ' + esc(x.hora) : ''}${x.o ? ' · ' + esc(x.o) : ''}</small></div><span class="tag t-${x.e ? COD[x.e] || 'p' : 'p'}">${x.e ? esc(x.e === 'Operativo con observación' ? 'Observación' : x.e) : 'Pendiente'}</span></div>`).join('') + '</div>' : '<p class="vacio"><span>📋</span>No hay pegas para este día.</p>'}
+    ${datos.hechas ? '<button class="btn" id="xls">⬇️ Descargar Excel del día</button><p id="xmsg" style="text-align:center;font-weight:600"></p>' : ''}`;
+  const x = $('xls'); if (x) x.onclick = excel;
+}
+async function excel() {
+  const b = $('xls'); b.disabled = true; $('xmsg').textContent = 'Generando Excel…';
+  try { const r = await api('exportarExcel', fecha, fecha, []); $('xmsg').innerHTML = `✅ <a href="${esc(r.url)}" style="color:var(--red)">Descargar ${esc(r.nombre)}.xlsx</a>`; window.open(r.url, '_blank'); }
+  catch (e) { $('xmsg').textContent = '⚠️ ' + e.message; }
+  b.disabled = false;
+}
+function ver(titulo, html) { $('vTit').textContent = titulo; $('vBody').innerHTML = html; $('visor').classList.add('on'); }
+$('vX').onclick = () => $('visor').classList.remove('on');
+$('vDocs').addEventListener('click', e => {
+  const c = e.target.closest('[data-doc]'); if (!c) return; const d = datos.docs[+c.dataset.doc];
+  if (!(d.ids || []).length && d.url) { window.open(d.url, '_blank'); return; }
+  ver(d.tit, (d.nota ? `<p style="color:#fff;white-space:pre-line;width:100%;max-width:900px">${esc(d.nota)}</p>` : '') + (d.ids || []).map((id, k) => `<small>Hoja ${k + 1} de ${d.ids.length}</small><img src="${G(id)}" alt=""><a class="dl" href="${DL(id)}" target="_blank" rel="noopener">⬇️ Descargar hoja ${k + 1}</a>`).join('') + (d.url ? `<a class="dl" href="${esc(d.url)}" target="_blank" rel="noopener">📎 Abrir ${esc(d.nombre || 'archivo')}</a>` : ''));
+});
+$('vPegas').addEventListener('click', e => {
+  const f = e.target.closest('[data-foto]'); if (!f) return; const x = datos.pegas[+f.dataset.foto];
+  ver(`${x.n} · ${x.c}`, `<img src="${G(x.foto)}" alt=""><a class="dl" href="${DL(x.foto)}" target="_blank" rel="noopener">⬇️ Descargar foto</a>`);
+});
+document.querySelectorAll('.seg button').forEach(b => b.onclick = () => { tab = b.dataset.t; document.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); $('vDocs').style.display = tab === 'docs' ? 'block' : 'none'; $('vPegas').style.display = tab === 'pegas' ? 'block' : 'none'; });
+$('pick').addEventListener('change', e => { const v = e.target.value; if (!v) return; const [y, m, d] = v.split('-'); fecha = `${d}-${m}-${y}`; $('vDocs').innerHTML = '<div class="esq"><i></i><i></i></div>'; cargar(); });
+cargar(); setInterval(() => { if (!document.hidden && !$('visor').classList.contains('on')) cargar(); }, 60000);
+})();
+</script>
+</body>
+</html>
